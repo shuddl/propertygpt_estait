@@ -1,0 +1,153 @@
+{
+  "location": "Santa Monica, CA",
+  "timeframe": "6m",
+  "summary": {
+    "median_price": 1850000,
+    "average_price": 2100000,
+    "price_change_pct": 5.2,
+    "days_on_market": 28,
+    "inventory_level": "low",
+    "market_tempo": "warm",
+    "buyer_seller_ratio": 1.2
+  },
+  "price_trends": [
+    {
+      "period": "Jan 2024",
+      "median_price": 1750000,
+      "change_pct": 2.1,
+      "change_amount": 35000,
+      "volume": 45
+    },
+    {
+      "period": "Feb 2024",
+      "median_price": 1780000,
+      "change_pct": 1.7,
+      "change_amount": 30000,
+      "volume": 52
+    },
+    {
+      "period": "Mar 2024",
+      "median_price": 1820000,
+      "change_pct": 2.2,
+      "change_amount": 40000,
+      "volume": 48
+    },
+    {
+      "period": "Apr 2024",
+      "median_price": 1830000,
+      "change_pct": 0.5,
+      "change_amount": 10000,
+      "volume": 41
+    },
+    {
+      "period": "May 2024",
+      "median_price": 1840000,
+      "change_pct": 0.5,
+      "change_amount": 10000,
+      "volume": 39
+    },
+    {
+      "period": "Jun 2024",
+      "median_price": 1850000,
+      "change_pct": 0.5,
+      "change_amount": 10000,
+      "volume": 37
+    }
+  ],
+  "inventory_analysis": {
+    "months_supply": 2.1,
+    "new_listings": 156,
+    "active_listings": 89,
+    "pending_sales": 67,
+    "monthly_data": [
+      {
+        "period": "Jan 2024",
+        "months_supply": 2.8,
+        "new_listings": 142
+      },
+      {
+        "period": "Feb 2024",
+        "months_supply": 2.6,
+        "new_listings": 148
+      },
+      {
+        "period": "Mar 2024",
+        "months_supply": 2.3,
+        "new_listings": 159
+      },
+      {
+        "period": "Apr 2024",
+        "months_supply": 2.1,
+        "new_listings": 134
+      },
+      {
+        "period": "May 2024",
+        "months_supply": 2.0,
+        "new_listings": 156
+      },
+      {
+        "period": "Jun 2024",
+        "months_supply": 2.1,
+        "new_listings": 156
+      }
+    ]
+  },
+  "neighborhood_comparison": [
+    {
+      "name": "Santa Monica",
+      "median_price": 1850000,
+      "price_change_pct": 5.2
+    },
+    {
+      "name": "Venice",
+      "median_price": 1420000,
+      "price_change_pct": 3.8
+    },
+    {
+      "name": "Marina del Rey",
+      "median_price": 980000,
+      "price_change_pct": 2.1
+    },
+    {
+      "name": "Manhattan Beach",
+      "median_price": 2850000,
+      "price_change_pct": 7.2
+    }
+  ],
+  "predictive_insights": [
+    {
+      "type": "price_forecast",
+      "title": "Upward Price Pressure",
+      "description": "Based on recent trends, prices may increase by 3.2% over the next 3 months.",
+      "confidence": 0.75,
+      "impact": "high",
+      "timeline": "3_months"
+    },
+    {
+      "type": "inventory_forecast",
+      "title": "Decreasing Inventory",
+      "description": "Inventory levels are trending down, which typically favors sellers.",
+      "confidence": 0.68,
+      "impact": "medium",
+      "timeline": "2_months"
+    }
+  ],
+  "recommendations": [
+    {
+      "title": "Act Quickly on Listings",
+      "description": "With only 2.1 months of supply, quality properties are moving fast."
+    },
+    {
+      "title": "Price Competitively",
+      "description": "Recent sales show buyers are willing to pay premium for well-positioned properties."
+    },
+    {
+      "title": "Focus on Quality",
+      "description": "Higher-end properties are seeing stronger appreciation than lower-tier homes."
+    },
+    {
+      "title": "Monitor Interest Rates",
+      "description": "Rate changes could significantly impact buyer demand in this price range."
+    }
+  ]
+}
