@@ -66,7 +66,11 @@ export async function POST(request: NextRequest) {
     
   } catch (error) {
     console.error('Property search error:', error);
-    
+
+    if (error instanceof Error && error.message === 'Authentication required') {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     if (error instanceof z.ZodError) {
       return NextResponse.json(
         { error: 'Invalid search parameters', details: error.errors },
@@ -119,6 +123,10 @@ export async function GET(request: NextRequest) {
     
   } catch (error) {
     console.error('Property search error:', error);
+
+    if (error instanceof Error && error.message === 'Authentication required') {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
     return NextResponse.json(
       { error: 'Property search failed' },
       { status: 500 }
