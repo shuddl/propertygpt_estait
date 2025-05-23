@@ -83,7 +83,11 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.error('Chat processing error:', error);
-    
+
+    if (error instanceof Error && error.message === 'Authentication required') {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     if (error instanceof z.ZodError) {
       return NextResponse.json(
         { error: 'Invalid input', details: error.errors },

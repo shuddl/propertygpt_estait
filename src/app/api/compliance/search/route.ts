@@ -78,10 +78,14 @@ export async function GET(request: NextRequest) {
       total: data?.length || 0
     });
   } catch (error) {
+    if (error instanceof Error && error.message === 'Authentication required') {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     if (error instanceof z.ZodError) {
       return NextResponse.json({ error: 'Invalid search parameters', details: error.errors }, { status: 400 });
     }
-    
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+
+    return NextResponse.json({ error: 'Failed to search compliance' }, { status: 500 });
   }
 }

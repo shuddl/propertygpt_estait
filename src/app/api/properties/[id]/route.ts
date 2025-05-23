@@ -30,6 +30,10 @@ export async function GET(
     
   } catch (error) {
     console.error('Property details error:', error);
+
+    if (error instanceof Error && error.message === 'Authentication required') {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
     return NextResponse.json(
       { error: 'Failed to get property details' },
       { status: 500 }
