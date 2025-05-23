@@ -4,11 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-PropertyGPT Estait is an anticipatory real estate intelligence platform that predicts user needs through sophisticated design patterns. It's built with Next.js 14+ and implements an 8-phase mesh architecture focused on anticipatory user interactions.
+PropertyGPT Estait is an anticipatory real estate intelligence platform that predicts user needs through sophisticated design patterns. It's built with Next.js 15+ and implements an 8-phase mesh architecture focused on anticipatory user interactions.
 
 ## Technology Stack
 
-- **Frontend**: Next.js 14+ with TypeScript, Tailwind CSS
+- **Frontend**: Next.js 15+ with TypeScript, Tailwind CSS
 - **Backend**: Next.js API routes with Supabase database
 - **AI Integration**: OpenAI GPT-4 for conversational intelligence
 - **Authentication**: NextAuth.js with Supabase adapter
