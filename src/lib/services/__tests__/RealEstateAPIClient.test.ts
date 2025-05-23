@@ -100,14 +100,31 @@ describe('RealEstateAPIClient', () => {
     });
 
     it('should handle rate limiting', async () => {
-      // Test rate limiting by making multiple rapid requests
+      // Test rate limiting by making more requests than allowed
       const params = {
         location: { city: 'Test' },
         limit: 1
       };
 
-      // Should not throw errors for normal usage
-      await expect(realEstateAPIClient.searchProperties(params)).resolves.toBeDefined();
+      // Speed up requests by mocking the API call
+      const originalSimulateAPICall = (realEstateAPIClient as any).simulateAPICall;
+      (realEstateAPIClient as any).simulateAPICall = jest.fn().mockResolvedValue({
+        success: true,
+        data: { properties: [], total: 0 }
+      });
+
+      // Perform requests up to the limit
+      for (let i = 0; i < 100; i++) {
+        await realEstateAPIClient.searchProperties(params);
+      }
+
+      // The next request should exceed the rate limiter
+      await expect(realEstateAPIClient.searchProperties(params))
+        .rejects
+        .toThrow('Rate limit exceeded: too many requests per minute');
+
+      // Restore original method
+      (realEstateAPIClient as any).simulateAPICall = originalSimulateAPICall;
     });
   });
 
